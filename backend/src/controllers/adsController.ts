@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as campaignService from '../services/campaignService.js';
+import * as campaignService from '../services/campaignService';
 
 export const getCampaigns = async (req: Request, res: Response) => {
     try {

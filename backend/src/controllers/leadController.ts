@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as leadService from '../services/leadService.js';
+import * as leadService from '../services/leadService';
 
 export const getLeads = async (req: Request, res: Response) => {
     try {

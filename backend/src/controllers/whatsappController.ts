@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as whatsappService from '../services/whatsappService.js';
+import * as whatsappService from '../services/whatsappService';
 
 export const getMessages = async (req: Request, res: Response) => {
     try {

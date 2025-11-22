@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String?
+  role      String   @default("USER")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Lead {
+  id          String   @id @default(uuid())
+  name        String
+  email       String?
+  phone       String?
+  status      String   @default("NEW")
+  source      String?
+  value       Float?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  assignedTo  String?
+}
+
+model Campaign {
+  id          String   @id @default(uuid())
+  name        String
+  platform    String   // 'google', 'meta', etc.
+  status      String   @default("DRAFT")
+  budget      Float?
+  startDate   DateTime?
+  endDate     DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

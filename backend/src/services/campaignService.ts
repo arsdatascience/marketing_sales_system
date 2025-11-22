@@ -1,0 +1,32 @@
+import prisma from '../config/prisma.js';
+
+export const createCampaign = async (data: any) => {
+    return await prisma.campaign.create({
+        data,
+    });
+};
+
+export const getAllCampaigns = async () => {
+    return await prisma.campaign.findMany({
+        orderBy: { createdAt: 'desc' },
+    });
+};
+
+export const getCampaignById = async (id: string) => {
+    return await prisma.campaign.findUnique({
+        where: { id },
+    });
+};
+
+export const updateCampaign = async (id: string, data: any) => {
+    return await prisma.campaign.update({
+        where: { id },
+        data,
+    });
+};
+
+export const deleteCampaign = async (id: string) => {
+    return await prisma.campaign.delete({
+        where: { id },
+    });
+};

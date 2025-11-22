@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getLeads, createLead, updateLead, deleteLead } from '../controllers/leadController.js';
+import { getLeads, createLead, updateLead, deleteLead } from '../controllers/leadController';
 
 const router = Router();
 

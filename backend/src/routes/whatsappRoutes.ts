@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getMessages, sendMessage, webhook } from '../controllers/whatsappController.js';
+import { getMessages, sendMessage, webhook } from '../controllers/whatsappController';
 
 const router = Router();
 

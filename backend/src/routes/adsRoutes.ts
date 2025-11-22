@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getCampaigns, createCampaign, updateCampaign, deleteCampaign } from '../controllers/adsController.js';
+import { getCampaigns, createCampaign, updateCampaign, deleteCampaign } from '../controllers/adsController';
 
 const router = Router();
 

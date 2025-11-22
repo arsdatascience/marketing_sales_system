@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.ts",
-    "build": "node node_modules/.bin/ts-node -e \"require('typescript').transpileModule('', { compilerOptions: {} })\" && node node_modules/.bin/tsc",
+    "build": "npx tsc",
     "start": "node node_modules/.bin/prisma generate && node node_modules/.bin/prisma db push --accept-data-loss && node dist/index.js",
     "prisma:generate": "prisma generate",
     "prisma:push": "prisma db push"

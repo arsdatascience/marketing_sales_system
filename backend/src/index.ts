@@ -1,10 +1,10 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import leadRoutes from './routes/leadRoutes.js';
-import adsRoutes from './routes/adsRoutes.js';
-import whatsappRoutes from './routes/whatsappRoutes.js';
-import authRoutes from './routes/authRoutes.js';
+import leadRoutes from './routes/leadRoutes';
+import adsRoutes from './routes/adsRoutes';
+import whatsappRoutes from './routes/whatsappRoutes';
+import authRoutes from './routes/authRoutes';
 
 dotenv.config();
 

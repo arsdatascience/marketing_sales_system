@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.ts",
     "build": "echo \"skip build\"",
-    "prestart": "chmod +x node_modules/.bin/prisma",
+    "prestart": "rm -rf node_modules && npm install && chmod +x node_modules/.bin/prisma",
     "start": "chmod +x node_modules/.bin/prisma && npx prisma generate && npx prisma db push --accept-data-loss && node -r ts-node/register src/index.ts",
     "prisma:generate": "prisma generate",
     "prisma:push": "prisma db push"

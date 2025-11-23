@@ -1,5 +1,5 @@
-import { getGoogleCampaigns } from './googleAdsService.js';
-import { getMetaCampaigns } from './metaAdsService.js';
+import { getGoogleCampaigns } from './googleAdsService';
+import { getMetaCampaigns } from './metaAdsService';
 
 export const getAllCampaigns = async () => {
     const googleCampaigns = await getGoogleCampaigns();
